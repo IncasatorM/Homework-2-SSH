@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Scanner;
-
 public class Main {
 
     private static final double CONV_MI = 1.60934;
@@ -10,11 +8,17 @@ public class Main {
         System.out.println("Converter App.");
 
         double km = 6;
+        double mils = 4;
         double miles = convKmToMiles(km);
-        System.out.println("Result is " + miles + " miles.");
+        double klm = convMilesToKm(mils);
+        System.out.println("Result is " + miles + " miles and " + klm + " km");
+
     }
 
     private static double convKmToMiles(double km) {
         return km / CONV_MI;
+    }
+    private static double convMilesToKm(double miles) {
+        return miles * CONV_MI;
     }
 }
